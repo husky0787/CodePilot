@@ -68,15 +68,15 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | SAND-01 | Phase 1 | Pending |
-| SAND-02 | Phase 2 | Pending |
+| SAND-02 | Phase 1 | Pending |
 | SAND-03 | Phase 1 | Pending |
 | SAND-04 | Phase 1 | Pending |
-| PORT-01 | Phase 3 | Pending |
-| PORT-02 | Phase 3 | Pending |
-| PORT-03 | Phase 3 | Pending |
-| LIFE-01 | Phase 4 | Pending |
-| LIFE-02 | Phase 4 | Pending |
-| LIFE-03 | Phase 3 | Pending |
+| PORT-01 | Phase 2 | Pending |
+| PORT-02 | Phase 2 | Pending |
+| PORT-03 | Phase 2 | Pending |
+| LIFE-01 | Phase 3 | Pending |
+| LIFE-02 | Phase 3 | Pending |
+| LIFE-03 | Phase 2 | Pending |
 
 **Coverage:**
 - v1 requirements: 10 total

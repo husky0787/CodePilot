@@ -7,7 +7,7 @@ stopped_at: Phase 1 context gathered
 last_updated: "2026-03-11T09:53:23.323Z"
 last_activity: 2026-03-11 — Roadmap created
 progress:
-  total_phases: 4
+  total_phases: 3
   completed_phases: 0
   total_plans: 0
   completed_plans: 0
@@ -21,11 +21,11 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-11)
 
 **Core value:** 用户通过浏览器一键获得完整的 CodePilot 云端开发环境，无需本地安装任何东西
-**Current focus:** Phase 1: Web Mode Adaptation
+**Current focus:** Phase 1: E2B Sandbox Template
 
 ## Current Position
 
-Phase: 1 of 4 (Web Mode Adaptation)
+Phase: 1 of 3 (E2B Sandbox Template)
 Plan: 0 of ? in current phase
 Status: Ready to plan
 Last activity: 2026-03-11 — Roadmap created
@@ -58,8 +58,9 @@ Progress: [░░░░░░░░░░] 0%
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
-- [Roadmap]: 4 phase strict dependency chain: Web Mode -> Template -> Portal -> Persistence
+- [Roadmap]: 3 phase chain: Template -> Portal -> Persistence (Web Mode phase removed — already works)
 - [Roadmap]: LIFE-03 (multi-provider keys) grouped with Portal phase, not Persistence
+- [Decision]: Phase 1 (Web Mode Adaptation) removed — CodePilot already runs in browser via npm run dev, Electron IPC has ?. guards
 
 ### Pending Todos
 
@@ -74,5 +75,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-11T09:53:23.321Z
-Stopped at: Phase 1 context gathered
-Resume file: .planning/phases/01-web-mode-adaptation/01-CONTEXT.md
+Stopped at: Roadmap updated — Phase 1 removed, ready to plan Phase 1 (E2B Sandbox Template)
+Resume file: None
