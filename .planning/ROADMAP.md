@@ -30,10 +30,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. better-sqlite3 在沙箱 Linux 环境中正常工作，会话历史和配置持久写入 SQLite
   4. Next.js 绑定 `0.0.0.0`，外部浏览器通过 E2B 端口暴露可正常访问全部页面
   5. Web 模式下无阻塞性 JS 报错，Electron 特有功能（安装向导、自动更新）自动降级
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 01-01: TBD
+- [ ] 01-01-PLAN.md — 健康检查增强 + E2B 沙箱模板文件创建
+- [ ] 01-02-PLAN.md — E2B 模板构建 + 端到端沙箱验证
 
 ### Phase 2: Portal Entry Site
 **Goal**: 用户通过独立入口站点输入 API Key，一键创建沙箱并跳转到云端 CodePilot
@@ -70,6 +71,6 @@ Phases execute in numeric order: 1 -> 2 -> 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. E2B Sandbox Template | 0/? | Not started | - |
+| 1. E2B Sandbox Template | 0/2 | Planning complete | - |
 | 2. Portal Entry Site | 0/? | Not started | - |
 | 3. Persistence & Hardening | 0/? | Not started | - |
