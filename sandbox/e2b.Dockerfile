@@ -37,11 +37,14 @@ COPY . .
 # 预装 Claude Code CLI（固定版本，更新时重建模板）
 RUN npm install -g @anthropic-ai/claude-code@1.0.17
 
-# 预创建 Claude 配置目录，避免首次运行时的权限问题
-RUN mkdir -p /home/user/.claude /home/user/.codepilot
-
 # 运行时清除代理（E2B 沙箱可直连外网）
 ENV HTTP_PROXY="" HTTPS_PROXY="" http_proxy="" https_proxy="" no_proxy=""
+
+# 预编译 Next.js（避免运行时编译耗尽内存）
+RUN npm run build
+
+# 预创建 Claude 配置目录，避免首次运行时的权限问题
+RUN mkdir -p /home/user/.claude /home/user/.codepilot
 
 # 设置数据目录环境变量
 ENV CLAUDE_GUI_DATA_DIR=/home/user/.codepilot
