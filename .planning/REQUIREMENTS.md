@@ -16,15 +16,15 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### 入口站点
 
-- [ ] **PORT-01**: 独立 Next.js Landing 页面展示产品价值、提供 API Key 输入框和"启动沙箱"按钮
+- [x] **PORT-01**: 独立 Next.js Landing 页面展示产品价值、提供 API Key 输入框和"启动沙箱"按钮
 - [x] **PORT-02**: 后端通过 E2B SDK 创建沙箱实例，注入用户 API Key 为环境变量，返回沙箱访问 URL
-- [ ] **PORT-03**: Landing 页支持恢复已暂停的沙箱（通过 cookie/localStorage 记录沙箱 ID）
+- [x] **PORT-03**: Landing 页支持恢复已暂停的沙箱（通过 cookie/localStorage 记录沙箱 ID）
 
 ### 沙箱生命周期
 
 - [ ] **LIFE-01**: 沙箱在用户空闲后自动暂停，保存完整文件系统和进程状态
 - [ ] **LIFE-02**: CodePilot UI 新增端口转发面板，展示沙箱内暴露的端口及可点击的预览链接
-- [ ] **LIFE-03**: 入口站点支持输入多个 AI Provider 的 API Key（Anthropic/OpenAI/Google 等）
+- [x] **LIFE-03**: 入口站点支持输入多个 AI Provider 的 API Key（Anthropic/OpenAI/Google 等）
 
 ## v2 Requirements
 
@@ -71,12 +71,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SAND-02 | Phase 1 | Complete |
 | SAND-03 | Phase 1 | Complete |
 | SAND-04 | Phase 1 | Pending |
-| PORT-01 | Phase 2 | Pending |
+| PORT-01 | Phase 2 | Complete |
 | PORT-02 | Phase 2 | Complete |
-| PORT-03 | Phase 2 | Pending |
+| PORT-03 | Phase 2 | Complete |
 | LIFE-01 | Phase 3 | Pending |
 | LIFE-02 | Phase 3 | Pending |
-| LIFE-03 | Phase 2 | Pending |
+| LIFE-03 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 10 total

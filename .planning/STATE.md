@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in-progress
-stopped_at: Completed 02-01-PLAN.md
-last_updated: "2026-03-13T03:37:15Z"
+status: executing
+stopped_at: Completed 02-02-PLAN.md
+last_updated: "2026-03-13T06:35:00.325Z"
 last_activity: 2026-03-13 — Phase 02 Plan 01 complete (sandbox backend API)
 progress:
   total_phases: 3
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 4
-  completed_plans: 3
+  completed_plans: 4
   percent: 75
 ---
 
@@ -53,6 +53,7 @@ Progress: [███████░░░] 75% (Phase 2, Plan 1/2)
 | Phase 01 P01 | 3min | 2 tasks | 3 files |
 | Phase 01 P02 | ~45min | 2 tasks | 4 files |
 | Phase 02 P01 | 4min | 3 tasks | 7 files |
+| Phase 02 P02 | 10min | 3 tasks | 11 files |
 
 ## Accumulated Context
 
@@ -71,6 +72,9 @@ Recent decisions affecting current work:
 - [Phase 01]: .dockerignore 必须排除 node_modules 防止 native 模块覆盖
 - [Phase 02]: 使用 fetch 调用 count_tokens 端点验证 Anthropic Key（不引入 @anthropic-ai/sdk）
 - [Phase 02]: 测试使用 node --experimental-strip-types --experimental-test-module-mocks（tsx 不支持 mock.module）
+- [Phase 02]: API key removed from portal — users configure provider keys in sandbox Settings (LIFE-03)
+- [Phase 02]: Root path bypasses i18n middleware — Cloud entry at /, docs at /en
+- [Phase 02]: Claude Code CLI bumped to 2.1.62 in sandbox Dockerfile
 
 ### Pending Todos
 
@@ -84,6 +88,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T03:37:15Z
-Stopped at: Completed 02-01-PLAN.md
-Resume file: .planning/phases/02-portal-entry-site/02-01-SUMMARY.md
+Last session: 2026-03-13T06:35:00.323Z
+Stopped at: Completed 02-02-PLAN.md
+Resume file: None
