@@ -70,7 +70,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SAND-01 | Phase 1 | Complete |
 | SAND-02 | Phase 1 | Complete |
 | SAND-03 | Phase 1 | Complete |
-| SAND-04 | Phase 4 | Pending |
+| SAND-04 | Phase 1 | Complete |
 | PORT-01 | Phase 2 | Complete |
 | PORT-02 | Phase 2 | Complete |
 | PORT-03 | Phase 2 | Complete |
