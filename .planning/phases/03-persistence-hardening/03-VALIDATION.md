@@ -38,14 +38,16 @@ created: 2026-03-13
 
 | Task ID | Plan | Wave | Requirement | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|-----------|-------------------|-------------|--------|
-| 03-01-01a | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/sandbox-pause.test.ts` | ❌ W0 | ⬜ pending |
-| 03-01-01b | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/sandbox-resume.test.ts` | ❌ W0 | ⬜ pending |
-| 03-01-01c | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/rate-limit.test.ts` | ❌ W0 | ⬜ pending |
-| 03-01-02 | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/sandbox-heartbeat.test.ts` | ❌ W0 | ⬜ pending |
-| 03-02-01 | 02 | 1 | LIFE-02 | unit | `tsx --test src/__tests__/unit/ports-scan.test.ts` | ❌ W0 | ⬜ pending |
-| 03-02-02 | 02 | 1 | LIFE-02 | manual | CDP 验证 — 需要云端环境 | N/A | ⬜ pending |
+| 03-01-01a | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/sandbox-pause.test.ts` | W0 | pending |
+| 03-01-01b | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/sandbox-resume.test.ts` | W0 | pending |
+| 03-01-01c | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/rate-limit.test.ts` | W0 | pending |
+| 03-01-02 | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/sandbox-heartbeat.test.ts` | W0 | pending |
+| 03-02-01 | 02 | 2 | LIFE-01 | typecheck | `npm run test` | N/A | pending |
+| 03-02-02 | 02 | 2 | LIFE-01 | typecheck | `npm run test` | N/A | pending |
+| 03-03-01 | 03 | 1 | LIFE-02 | unit | `tsx --test src/__tests__/unit/ports-scan.test.ts` | W0 | pending |
+| 03-03-02 | 03 | 1 | LIFE-02 | manual | CDP -- cloud env required | N/A | pending |
 
-*Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
+*Status: pending / green / red / flaky*
 
 ---
 
@@ -63,7 +65,8 @@ created: 2026-03-13
 
 | Behavior | Requirement | Why Manual | Test Instructions |
 |----------|-------------|------------|-------------------|
-| PortsPanel 渲染端口列表和链接 | LIFE-02 | 需要真实 E2B 沙箱和浏览器环境 | 启动沙箱 → 在沙箱中开启端口 → CDP 验证 PortsPanel 展示端口和链接 |
+| PortsPanel renders port list + links | LIFE-02 | Needs real E2B sandbox + browser | Start sandbox -> open ports -> CDP verify PortsPanel |
+| IdleWarningBanner countdown + dismiss | LIFE-01 | Needs running portal + idle timer | Wait 13min idle -> verify banner -> click Stay Active |
 
 ---
 
