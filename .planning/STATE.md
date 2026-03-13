@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 03-01-PLAN.md
-last_updated: "2026-03-13T07:48:00Z"
-last_activity: 2026-03-13 — Phase 03 Plan 01 complete (sandbox lifecycle backend)
+stopped_at: Completed 03-02-PLAN.md
+last_updated: "2026-03-13T07:58:40Z"
+last_activity: 2026-03-13 — Phase 03 Plan 02 complete (frontend sandbox lifecycle UI)
 progress:
   total_phases: 3
   completed_phases: 2
   total_plans: 7
-  completed_plans: 6
-  percent: 86
+  completed_plans: 7
+  percent: 100
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 ## Current Position
 
 Phase: 3 of 3 (Persistence & Hardening) — IN PROGRESS
-Plan: 1 of 3 in current phase (Plan 01 complete)
+Plan: 2 of 3 in current phase (Plan 02 complete)
 Status: executing phase 3
-Last activity: 2026-03-13 — Phase 03 Plan 01 complete (sandbox lifecycle backend)
+Last activity: 2026-03-13 — Phase 03 Plan 02 complete (frontend sandbox lifecycle UI)
 
-Progress: [█████████░] 86% (Phase 3, Plan 2/3 summaries)
+Progress: [██████████] 100% (Phase 3, Plan 3/3 summaries)
 
 ## Performance Metrics
 
@@ -55,6 +55,7 @@ Progress: [█████████░] 86% (Phase 3, Plan 2/3 summaries)
 | Phase 02 P01 | 4min | 3 tasks | 7 files |
 | Phase 02 P02 | 10min | 3 tasks | 11 files |
 | Phase 03 P01 | 8min | 2 tasks | 10 files |
+| Phase 03 P02 | 8min | 2 tasks | 6 files |
 | Phase 03 P03 | 4min | 2 tasks | 5 files |
 
 ## Accumulated Context
@@ -82,6 +83,9 @@ Recent decisions affecting current work:
 - [Phase 03]: pause() preferred over betaPause() with runtime fallback for E2B SDK compatibility
 - [Phase 03]: Heartbeat test uses extracted logic pattern (next/server cannot be mocked in Node ESM)
 - [Phase 03]: Rate limit cleanup interval uses unref() to prevent blocking process exit
+- [Phase 03]: Heartbeat sent from portal tab only; E2B timeout (~30min) as fallback if tab closed
+- [Phase 03]: isPausedSandbox detected via Sandbox.list() presence when sandbox not alive
+- [Phase 03]: 24h max lifetime enforced both client-side (CloudLauncher) and server-side (status API cleanup-on-access)
 
 ### Pending Todos
 
@@ -95,6 +99,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T07:48:00Z
-Stopped at: Completed 03-01-PLAN.md
+Last session: 2026-03-13T07:58:40Z
+Stopped at: Completed 03-02-PLAN.md
 Resume file: None
