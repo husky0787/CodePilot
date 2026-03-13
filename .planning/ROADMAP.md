@@ -92,6 +92,10 @@ Plans:
   1. SandboxLauncher.tsx 向 status API 传递 createdAt 查询参数
   2. SandboxRestore.tsx 向 status API 传递 createdAt 查询参数
   3. 服务端 24h cleanup-on-access 逻辑可被触发（非死代码）
+**Plans:** 1 plan
+
+Plans:
+- [ ] 05-01-PLAN.md — 修复 SandboxLauncher + SandboxRestore 的 createdAt 参数传递 + 测试
 
 ## Progress
 
@@ -104,4 +108,4 @@ Phases execute in numeric order: 1 -> 2 -> 3
 | 2. Portal Entry Site | 0/2 | Planning complete | - |
 | 3. Persistence & Hardening | 0/3 | Planning complete | - |
 | 4. Retroactive Verification & Traceability Fix | 0/2 | Planning complete | - |
-| 5. createdAt Cleanup Integration | 0/? | Gap closure | - |
+| 5. createdAt Cleanup Integration | 0/1 | Planning complete | - |
