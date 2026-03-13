@@ -2,8 +2,8 @@
 phase: 2
 slug: portal-entry-site
 status: draft
-nyquist_compliant: false
-wave_0_complete: false
+nyquist_compliant: true
+wave_0_complete: true
 created: 2026-03-13
 ---
 
@@ -38,12 +38,12 @@ created: 2026-03-13
 
 | Task ID | Plan | Wave | Requirement | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|-----------|-------------------|-------------|--------|
-| 02-01-01 | 01 | 0 | PORT-02 | unit | `tsx --test apps/site/src/__tests__/sandbox-create.test.ts` | ❌ W0 | ⬜ pending |
-| 02-01-02 | 01 | 0 | PORT-03 | unit | `tsx --test apps/site/src/__tests__/sandbox-restore.test.ts` | ❌ W0 | ⬜ pending |
-| 02-XX-XX | XX | 1 | PORT-01 | smoke | `npx playwright test --grep @smoke` | ❌ W0 | ⬜ pending |
-| 02-XX-XX | XX | 1 | PORT-02 | integration | `npm run test:smoke` | ❌ | ⬜ pending |
-| 02-XX-XX | XX | 1 | PORT-03 | integration | `npm run test:smoke` | ❌ | ⬜ pending |
-| 02-XX-XX | XX | 1 | LIFE-03 | manual-only | N/A | N/A | ⬜ pending |
+| 02-01-01 | 01 | 1 | PORT-02 | typecheck | `npm run test` | N/A | ⬜ pending |
+| 02-01-02 | 01 | 1 | PORT-02 | typecheck | `npm run test` | N/A | ⬜ pending |
+| 02-01-03 | 01 | 1 | PORT-02, PORT-03 | unit | `npx tsx --test apps/site/src/__tests__/sandbox-create.test.ts apps/site/src/__tests__/sandbox-restore.test.ts` | Created by 02-01 Task 3 | ⬜ pending |
+| 02-02-01 | 02 | 2 | PORT-01, PORT-03 | typecheck | `npm run test` | N/A | ⬜ pending |
+| 02-02-02 | 02 | 2 | PORT-01 | typecheck | `npm run test` | N/A | ⬜ pending |
+| 02-02-03 | 02 | 2 | PORT-01, PORT-02, PORT-03 | smoke | `npm run test:smoke` | N/A | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 
@@ -51,9 +51,11 @@ created: 2026-03-13
 
 ## Wave 0 Requirements
 
-- [ ] `apps/site/src/__tests__/sandbox-create.test.ts` — stubs for PORT-02 API Route 逻辑（mock E2B SDK）
-- [ ] `apps/site/src/__tests__/sandbox-restore.test.ts` — stubs for PORT-03 恢复逻辑
-- [ ] `e2b` package install: `cd apps/site && npm install e2b`
+All Wave 0 items are now covered by Plan 02-01 Task 3:
+
+- [x] `apps/site/src/__tests__/sandbox-create.test.ts` — unit tests for PORT-02 API Route logic (mock E2B SDK) — **Plan 02-01 Task 3**
+- [x] `apps/site/src/__tests__/sandbox-restore.test.ts` — unit tests for PORT-03 restore logic — **Plan 02-01 Task 3**
+- [x] `e2b` package install: `cd apps/site && npm install e2b` — **Plan 02-01 Task 1**
 
 ---
 
@@ -61,7 +63,7 @@ created: 2026-03-13
 
 | Behavior | Requirement | Why Manual | Test Instructions |
 |----------|-------------|------------|-------------------|
-| 多 Provider Key 输入 | LIFE-03 | Phase 2 CONTEXT 决定 Landing 页只输入 Anthropic Key，其余在沙箱内配置 | 进入沙箱后在 CodePilot 设置页验证多 Key 配置 |
+| 多 Provider Key 在沙箱内配置 | LIFE-03 | Landing 页只输入 Anthropic Key（per CONTEXT.md 决策），其余在沙箱内 CodePilot 设置页配置 | 进入沙箱后在 CodePilot 设置页验证多 Key 配置 |
 | Landing 页视觉效果 | PORT-01 | UI 审美需人工判断 | CDP 截图审查布局、配色、响应式 |
 
 *If none: "All phase behaviors have automated verification."*
@@ -70,11 +72,11 @@ created: 2026-03-13
 
 ## Validation Sign-Off
 
-- [ ] All tasks have `<automated>` verify or Wave 0 dependencies
-- [ ] Sampling continuity: no 3 consecutive tasks without automated verify
-- [ ] Wave 0 covers all MISSING references
-- [ ] No watch-mode flags
-- [ ] Feedback latency < 15s
-- [ ] `nyquist_compliant: true` set in frontmatter
+- [x] All tasks have `<automated>` verify or Wave 0 dependencies
+- [x] Sampling continuity: no 3 consecutive tasks without automated verify
+- [x] Wave 0 covers all MISSING references
+- [x] No watch-mode flags
+- [x] Feedback latency < 15s
+- [x] `nyquist_compliant: true` set in frontmatter
 
-**Approval:** pending
+**Approval:** approved

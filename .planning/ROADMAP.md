@@ -44,11 +44,11 @@ Plans:
   1. 用户访问入口站点看到 Landing 页面，包含产品介绍、API Key 输入框和"启动沙箱"按钮
   2. 用户输入 Anthropic API Key 并点击启动后，浏览器在 30 秒内跳转到可用的 CodePilot 沙箱
   3. 用户关闭浏览器后重新访问入口站点，可恢复之前暂停的沙箱（通过 cookie/localStorage）
-  4. 用户可输入多个 AI Provider 的 API Key（Anthropic/OpenAI/Google），全部注入沙箱环境变量
+  4. Landing 页只输入 Anthropic API Key（其他 Provider Key 在沙箱内 CodePilot 设置页配置，per CONTEXT.md 锁定决策 LIFE-03）
 **Plans:** 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — E2B SDK 安装 + API Key 验证 + 沙箱创建/状态 API Routes
+- [ ] 02-01-PLAN.md — E2B SDK 安装 + API Key 验证 + 沙箱创建/状态 API Routes + 单元测试
 - [ ] 02-02-PLAN.md — Landing 页面 + Cloud 组件（表单/进度/恢复）+ 端到端集成
 
 ### Phase 3: Persistence & Hardening
