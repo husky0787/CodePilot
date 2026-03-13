@@ -12,7 +12,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **SAND-01**: CodePilot 以纯 Next.js Web 模式运行，所有 Electron IPC 调用优雅降级为 Web 替代方案
 - [x] **SAND-02**: 自定义 E2B 沙箱模板预装 Node.js、Claude Code CLI、better-sqlite3、全部 CodePilot 依赖
 - [x] **SAND-03**: 沙箱内 Next.js 绑定 `0.0.0.0` 并通过 E2B 端口暴露供外部浏览器访问
-- [ ] **SAND-04**: 用户通过浏览器 URL 直接访问沙箱内完整的 CodePilot Chat/文件/工具 UI
+- [x] **SAND-04**: 用户通过浏览器 URL 直接访问沙箱内完整的 CodePilot Chat/文件/工具 UI
 
 ### 入口站点
 
@@ -70,7 +70,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SAND-01 | Phase 1 | Complete |
 | SAND-02 | Phase 1 | Complete |
 | SAND-03 | Phase 1 | Complete |
-| SAND-04 | Phase 1 | Pending |
+| SAND-04 | Phase 4 | Pending |
 | PORT-01 | Phase 2 | Complete |
 | PORT-02 | Phase 2 | Complete |
 | PORT-03 | Phase 2 | Complete |

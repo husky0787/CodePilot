@@ -17,6 +17,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 1: E2B Sandbox Template** - 构建预装全部依赖的自定义 E2B 沙箱模板，一键启动 CodePilot
 - [ ] **Phase 2: Portal Entry Site** - 独立入口站点，用户输入 API Key 即可创建并进入云端沙箱
 - [ ] **Phase 3: Persistence & Hardening** - 沙箱自动暂停/恢复、端口转发面板、生产环境加固
+- [ ] **Phase 4: Retroactive Verification & Traceability Fix** - 补充 Phase 1/2 的 VERIFICATION.md，修复 SAND-04 traceability
+- [ ] **Phase 5: createdAt Cleanup Integration** - 修复 createdAt 参数传递，贯通 24h 服务端清理流程
 
 ## Phase Details
 
@@ -66,6 +68,26 @@ Plans:
 - [ ] 03-02-PLAN.md — 沙箱生命周期前端（空闲警告 + 心跳集成 + SandboxRestore 恢复 + 状态 API 增强）
 - [ ] 03-03-PLAN.md — 端口转发面板（端口扫描 API + PortsPanel 组件 + RightPanel 集成）
 
+### Phase 4: Retroactive Verification & Traceability Fix
+**Goal**: 为 Phase 1 和 Phase 2 补充 VERIFICATION.md，修复 SAND-04 的 traceability 状态
+**Depends on**: Phase 3
+**Requirements**: SAND-01, SAND-02, SAND-03, SAND-04, PORT-01, PORT-02, PORT-03, LIFE-03
+**Gap Closure:** Closes gaps from v1.0 audit
+**Success Criteria** (what must be TRUE):
+  1. Phase 01 目录下存在 VERIFICATION.md，覆盖 SAND-01~04 全部需求的验证
+  2. Phase 02 目录下存在 VERIFICATION.md，覆盖 PORT-01~03, LIFE-03 全部需求的验证
+  3. REQUIREMENTS.md 中 SAND-04 状态从 `[ ] Pending` 更新为 `[x] Complete`
+
+### Phase 5: createdAt Cleanup Integration
+**Goal**: 修复 createdAt 参数传递链路，使服务端 24h 清理逻辑生效
+**Depends on**: Phase 4
+**Requirements**: LIFE-01
+**Gap Closure:** Closes gaps from v1.0 audit
+**Success Criteria** (what must be TRUE):
+  1. SandboxLauncher.tsx 向 status API 传递 createdAt 查询参数
+  2. SandboxRestore.tsx 向 status API 传递 createdAt 查询参数
+  3. 服务端 24h cleanup-on-access 逻辑可被触发（非死代码）
+
 ## Progress
 
 **Execution Order:**
@@ -76,3 +98,5 @@ Phases execute in numeric order: 1 -> 2 -> 3
 | 1. E2B Sandbox Template | 0/2 | Planning complete | - |
 | 2. Portal Entry Site | 0/2 | Planning complete | - |
 | 3. Persistence & Hardening | 0/3 | Planning complete | - |
+| 4. Retroactive Verification & Traceability Fix | 0/? | Gap closure | - |
+| 5. createdAt Cleanup Integration | 0/? | Gap closure | - |
