@@ -77,6 +77,11 @@ Plans:
   1. Phase 01 目录下存在 VERIFICATION.md，覆盖 SAND-01~04 全部需求的验证
   2. Phase 02 目录下存在 VERIFICATION.md，覆盖 PORT-01~03, LIFE-03 全部需求的验证
   3. REQUIREMENTS.md 中 SAND-04 状态从 `[ ] Pending` 更新为 `[x] Complete`
+**Plans:** 2 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Phase 1 VERIFICATION.md 撰写 + SAND-04 traceability 修复
+- [ ] 04-02-PLAN.md — Phase 2 VERIFICATION.md 撰写
 
 ### Phase 5: createdAt Cleanup Integration
 **Goal**: 修复 createdAt 参数传递链路，使服务端 24h 清理逻辑生效
@@ -98,5 +103,5 @@ Phases execute in numeric order: 1 -> 2 -> 3
 | 1. E2B Sandbox Template | 0/2 | Planning complete | - |
 | 2. Portal Entry Site | 0/2 | Planning complete | - |
 | 3. Persistence & Hardening | 0/3 | Planning complete | - |
-| 4. Retroactive Verification & Traceability Fix | 0/? | Gap closure | - |
+| 4. Retroactive Verification & Traceability Fix | 0/2 | Planning complete | - |
 | 5. createdAt Cleanup Integration | 0/? | Gap closure | - |
