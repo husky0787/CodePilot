@@ -13,6 +13,7 @@ import { usePanel } from "@/hooks/usePanel";
 import { useTranslation } from "@/hooks/useTranslation";
 import { FileTree } from "@/components/project/FileTree";
 import { TaskList } from "@/components/project/TaskList";
+import { PortsPanel } from "@/components/cloud/PortsPanel";
 
 interface RightPanelProps {
   width?: number;
@@ -113,6 +114,9 @@ export function RightPanel({ width }: RightPanelProps) {
             onFileAdd={handleFileAdd}
           />
         </div>
+
+        {/* Ports -- cloud mode only (renders null in desktop mode) */}
+        <PortsPanel />
       </div>
     </aside>
   );
