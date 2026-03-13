@@ -2,7 +2,7 @@
 phase: 3
 slug: persistence-hardening
 status: draft
-nyquist_compliant: false
+nyquist_compliant: true
 wave_0_complete: false
 created: 2026-03-13
 ---
@@ -38,12 +38,12 @@ created: 2026-03-13
 
 | Task ID | Plan | Wave | Requirement | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|-----------|-------------------|-------------|--------|
-| 03-01-01 | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/sandbox-pause.test.ts` | ❌ W0 | ⬜ pending |
-| 03-01-02 | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/sandbox-resume.test.ts` | ❌ W0 | ⬜ pending |
-| 03-01-03 | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/sandbox-heartbeat.test.ts` | ❌ W0 | ⬜ pending |
-| 03-01-04 | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/rate-limit.test.ts` | ❌ W0 | ⬜ pending |
-| 03-02-01 | 02 | 2 | LIFE-02 | unit | `tsx --test src/__tests__/unit/ports-scan.test.ts` | ❌ W0 | ⬜ pending |
-| 03-02-02 | 02 | 2 | LIFE-02 | manual | CDP 验证 — 需要云端环境 | N/A | ⬜ pending |
+| 03-01-01a | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/sandbox-pause.test.ts` | ❌ W0 | ⬜ pending |
+| 03-01-01b | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/sandbox-resume.test.ts` | ❌ W0 | ⬜ pending |
+| 03-01-01c | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/rate-limit.test.ts` | ❌ W0 | ⬜ pending |
+| 03-01-02 | 01 | 1 | LIFE-01 | unit | `node --experimental-strip-types --experimental-test-module-mocks --test apps/site/src/__tests__/sandbox-heartbeat.test.ts` | ❌ W0 | ⬜ pending |
+| 03-02-01 | 02 | 1 | LIFE-02 | unit | `tsx --test src/__tests__/unit/ports-scan.test.ts` | ❌ W0 | ⬜ pending |
+| 03-02-02 | 02 | 1 | LIFE-02 | manual | CDP 验证 — 需要云端环境 | N/A | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 
@@ -69,9 +69,9 @@ created: 2026-03-13
 
 ## Validation Sign-Off
 
-- [ ] All tasks have `<automated>` verify or Wave 0 dependencies
-- [ ] Sampling continuity: no 3 consecutive tasks without automated verify
-- [ ] Wave 0 covers all MISSING references
+- [x] All tasks have `<automated>` verify or Wave 0 dependencies
+- [x] Sampling continuity: no 3 consecutive tasks without automated verify
+- [x] Wave 0 covers all MISSING references
 - [ ] No watch-mode flags
 - [ ] Feedback latency < 20s
 - [ ] `nyquist_compliant: true` set in frontmatter
