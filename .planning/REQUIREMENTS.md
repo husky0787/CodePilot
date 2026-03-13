@@ -23,7 +23,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### 沙箱生命周期
 
 - [ ] **LIFE-01**: 沙箱在用户空闲后自动暂停，保存完整文件系统和进程状态
-- [ ] **LIFE-02**: CodePilot UI 新增端口转发面板，展示沙箱内暴露的端口及可点击的预览链接
+- [x] **LIFE-02**: CodePilot UI 新增端口转发面板，展示沙箱内暴露的端口及可点击的预览链接
 - [x] **LIFE-03**: 入口站点支持输入多个 AI Provider 的 API Key（Anthropic/OpenAI/Google 等）
 
 ## v2 Requirements
@@ -75,7 +75,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PORT-02 | Phase 2 | Complete |
 | PORT-03 | Phase 2 | Complete |
 | LIFE-01 | Phase 3 | Pending |
-| LIFE-02 | Phase 3 | Pending |
+| LIFE-02 | Phase 3 | Complete |
 | LIFE-03 | Phase 2 | Complete |
 
 **Coverage:**

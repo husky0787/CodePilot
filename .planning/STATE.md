@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 3 context gathered
-last_updated: "2026-03-13T07:06:54.033Z"
+stopped_at: Completed 03-03-PLAN.md
+last_updated: "2026-03-13T07:44:17.199Z"
 last_activity: 2026-03-13 — Phase 02 Plan 01 complete (sandbox backend API)
 progress:
   total_phases: 3
   completed_phases: 2
-  total_plans: 4
-  completed_plans: 4
+  total_plans: 7
+  completed_plans: 5
   percent: 75
 ---
 
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-11)
 
 **Core value:** 用户通过浏览器一键获得完整的 CodePilot 云端开发环境，无需本地安装任何东西
-**Current focus:** Phase 2: Portal Entry Site
+**Current focus:** Phase 3: Persistence & Hardening
 
 ## Current Position
 
-Phase: 2 of 3 (Portal Entry Site) — IN PROGRESS
-Plan: 1 of 2 in current phase (Plan 01 complete)
-Status: executing phase 2
-Last activity: 2026-03-13 — Phase 02 Plan 01 complete (sandbox backend API)
+Phase: 3 of 3 (Persistence & Hardening) — IN PROGRESS
+Plan: 3 of 3 in current phase (Plan 03 complete)
+Status: executing phase 3
+Last activity: 2026-03-13 — Phase 03 Plan 03 complete (port forwarding panel)
 
-Progress: [███████░░░] 75% (Phase 2, Plan 1/2)
+Progress: [███████░░░] 71% (Phase 3, Plan 1/3 summaries)
 
 ## Performance Metrics
 
@@ -54,6 +54,7 @@ Progress: [███████░░░] 75% (Phase 2, Plan 1/2)
 | Phase 01 P02 | ~45min | 2 tasks | 4 files |
 | Phase 02 P01 | 4min | 3 tasks | 7 files |
 | Phase 02 P02 | 10min | 3 tasks | 11 files |
+| Phase 03 P03 | 4min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -75,6 +76,8 @@ Recent decisions affecting current work:
 - [Phase 02]: API key removed from portal — users configure provider keys in sandbox Settings (LIFE-03)
 - [Phase 02]: Root path bypasses i18n middleware — Cloud entry at /, docs at /en
 - [Phase 02]: Claude Code CLI bumped to 2.1.62 in sandbox Dockerfile
+- [Phase 03]: Pure function parseSsOutput exported for testability instead of mocking execSync
+- [Phase 03]: PortsPanel self-gates via cloud check, RightPanel renders it unconditionally
 
 ### Pending Todos
 
@@ -88,6 +91,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T07:06:54.031Z
-Stopped at: Phase 3 context gathered
-Resume file: .planning/phases/03-persistence-hardening/03-CONTEXT.md
+Last session: 2026-03-13T07:44:17.197Z
+Stopped at: Completed 03-03-PLAN.md
+Resume file: None
