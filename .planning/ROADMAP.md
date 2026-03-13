@@ -18,7 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 2: Portal Entry Site** - 独立入口站点，用户输入 API Key 即可创建并进入云端沙箱
 - [ ] **Phase 3: Persistence & Hardening** - 沙箱自动暂停/恢复、端口转发面板、生产环境加固
 - [ ] **Phase 4: Retroactive Verification & Traceability Fix** - 补充 Phase 1/2 的 VERIFICATION.md，修复 SAND-04 traceability
-- [ ] **Phase 5: createdAt Cleanup Integration** - 修复 createdAt 参数传递，贯通 24h 服务端清理流程
+- [x] **Phase 5: createdAt Cleanup Integration** - 修复 createdAt 参数传递，贯通 24h 服务端清理流程 (completed 2026-03-13)
 
 ## Phase Details
 
@@ -92,7 +92,7 @@ Plans:
   1. SandboxLauncher.tsx 向 status API 传递 createdAt 查询参数
   2. SandboxRestore.tsx 向 status API 传递 createdAt 查询参数
   3. 服务端 24h cleanup-on-access 逻辑可被触发（非死代码）
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 
 Plans:
 - [ ] 05-01-PLAN.md — 修复 SandboxLauncher + SandboxRestore 的 createdAt 参数传递 + 测试
@@ -108,4 +108,4 @@ Phases execute in numeric order: 1 -> 2 -> 3
 | 2. Portal Entry Site | 0/2 | Planning complete | - |
 | 3. Persistence & Hardening | 0/3 | Planning complete | - |
 | 4. Retroactive Verification & Traceability Fix | 0/2 | Planning complete | - |
-| 5. createdAt Cleanup Integration | 0/1 | Planning complete | - |
+| 5. createdAt Cleanup Integration | 1/1 | Complete   | 2026-03-13 |

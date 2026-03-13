@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 04-02-PLAN.md
-last_updated: "2026-03-13T09:22:49.546Z"
-last_activity: 2026-03-13 — Phase 04 Plan 01 complete (Phase 1 retroactive verification)
+stopped_at: Completed 05-01-PLAN.md
+last_updated: "2026-03-13T13:17:42.126Z"
+last_activity: 2026-03-13 — Phase 05 Plan 01 complete (createdAt cleanup integration)
 progress:
   total_phases: 5
-  completed_phases: 4
-  total_plans: 9
-  completed_plans: 9
-  percent: 89
+  completed_phases: 5
+  total_plans: 10
+  completed_plans: 10
+  percent: 100
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-11)
 
 **Core value:** 用户通过浏览器一键获得完整的 CodePilot 云端开发环境，无需本地安装任何东西
-**Current focus:** Phase 4: Retroactive Verification
+**Current focus:** Phase 5: createdAt Cleanup Integration
 
 ## Current Position
 
-Phase: 4 of 5 (Retroactive Verification) — IN PROGRESS
-Plan: 1 of 2 in current phase (Plan 01 complete)
-Status: executing phase 4
-Last activity: 2026-03-13 — Phase 04 Plan 01 complete (Phase 1 retroactive verification)
+Phase: 5 of 5 (createdAt Cleanup Integration) — COMPLETE
+Plan: 1 of 1 in current phase (Plan 01 complete)
+Status: all phases complete
+Last activity: 2026-03-13 — Phase 05 Plan 01 complete (createdAt cleanup integration)
 
-Progress: [█████████░] 89% (8/9 plans complete)
+Progress: [██████████] 100% (10/10 plans complete)
 
 ## Performance Metrics
 
@@ -59,6 +59,7 @@ Progress: [█████████░] 89% (8/9 plans complete)
 | Phase 03 P03 | 4min | 2 tasks | 5 files |
 | Phase 04 P01 | 2min | 2 tasks | 2 files |
 | Phase 04 P02 | 2min | 1 tasks | 1 files |
+| Phase 05 P01 | 2min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -90,6 +91,8 @@ Recent decisions affecting current work:
 - [Phase 03]: 24h max lifetime enforced both client-side (CloudLauncher) and server-side (status API cleanup-on-access)
 - [Phase 04]: SAND-04 was completed in Phase 1 Plan 02, not Phase 4 -- traceability corrected in REQUIREMENTS.md
 - [Phase 04]: LIFE-03 verified via design decision: API key in sandbox Settings, not portal input
+- [Phase 05]: URLSearchParams pattern for building status API query strings with optional createdAt param
+- [Phase 05]: Falsy check on createdAt provides safe degradation (0, NaN, undefined all omit param)
 
 ### Pending Todos
 
@@ -103,6 +106,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T09:18:51.472Z
-Stopped at: Completed 04-02-PLAN.md
+Last session: 2026-03-13T13:17:06Z
+Stopped at: Completed 05-01-PLAN.md
 Resume file: None
