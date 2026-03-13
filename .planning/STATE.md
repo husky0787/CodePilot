@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: completed
-stopped_at: Phase 2 context gathered
-last_updated: "2026-03-13T02:51:27.346Z"
-last_activity: 2026-03-12 — Phase 01 complete (E2B sandbox template built and verified)
+status: in-progress
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-03-13T03:37:15Z"
+last_activity: 2026-03-13 — Phase 02 Plan 01 complete (sandbox backend API)
 progress:
   total_phases: 3
   completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
-  percent: 100
+  total_plans: 4
+  completed_plans: 3
+  percent: 75
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-11)
 
 **Core value:** 用户通过浏览器一键获得完整的 CodePilot 云端开发环境，无需本地安装任何东西
-**Current focus:** Phase 1: E2B Sandbox Template
+**Current focus:** Phase 2: Portal Entry Site
 
 ## Current Position
 
-Phase: 1 of 3 (E2B Sandbox Template) — COMPLETE
-Plan: 2 of 2 in current phase
-Status: phase complete
-Last activity: 2026-03-12 — Phase 01 complete (E2B sandbox template built and verified)
+Phase: 2 of 3 (Portal Entry Site) — IN PROGRESS
+Plan: 1 of 2 in current phase (Plan 01 complete)
+Status: executing phase 2
+Last activity: 2026-03-13 — Phase 02 Plan 01 complete (sandbox backend API)
 
-Progress: [██████████] 100% (Phase 1)
+Progress: [███████░░░] 75% (Phase 2, Plan 1/2)
 
 ## Performance Metrics
 
@@ -52,6 +52,7 @@ Progress: [██████████] 100% (Phase 1)
 *Updated after each plan completion*
 | Phase 01 P01 | 3min | 2 tasks | 3 files |
 | Phase 01 P02 | ~45min | 2 tasks | 4 files |
+| Phase 02 P01 | 4min | 3 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -68,6 +69,8 @@ Recent decisions affecting current work:
 - [Phase 01]: dev→prod 模式: npm run dev 在 1024MB 沙箱中 OOM，改为 npm run build + next start
 - [Phase 01]: Docker 构建代理: 自定义 BUILD_PROXY ARG，运行时清除
 - [Phase 01]: .dockerignore 必须排除 node_modules 防止 native 模块覆盖
+- [Phase 02]: 使用 fetch 调用 count_tokens 端点验证 Anthropic Key（不引入 @anthropic-ai/sdk）
+- [Phase 02]: 测试使用 node --experimental-strip-types --experimental-test-module-mocks（tsx 不支持 mock.module）
 
 ### Pending Todos
 
@@ -81,6 +84,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T02:51:27.344Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-portal-entry-site/02-CONTEXT.md
+Last session: 2026-03-13T03:37:15Z
+Stopped at: Completed 02-01-PLAN.md
+Resume file: .planning/phases/02-portal-entry-site/02-01-SUMMARY.md
