@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 03-03-PLAN.md
-last_updated: "2026-03-13T07:44:17.199Z"
-last_activity: 2026-03-13 — Phase 02 Plan 01 complete (sandbox backend API)
+stopped_at: Completed 03-01-PLAN.md
+last_updated: "2026-03-13T07:48:00Z"
+last_activity: 2026-03-13 — Phase 03 Plan 01 complete (sandbox lifecycle backend)
 progress:
   total_phases: 3
   completed_phases: 2
   total_plans: 7
-  completed_plans: 5
-  percent: 75
+  completed_plans: 6
+  percent: 86
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 ## Current Position
 
 Phase: 3 of 3 (Persistence & Hardening) — IN PROGRESS
-Plan: 3 of 3 in current phase (Plan 03 complete)
+Plan: 1 of 3 in current phase (Plan 01 complete)
 Status: executing phase 3
-Last activity: 2026-03-13 — Phase 03 Plan 03 complete (port forwarding panel)
+Last activity: 2026-03-13 — Phase 03 Plan 01 complete (sandbox lifecycle backend)
 
-Progress: [███████░░░] 71% (Phase 3, Plan 1/3 summaries)
+Progress: [█████████░] 86% (Phase 3, Plan 2/3 summaries)
 
 ## Performance Metrics
 
@@ -54,6 +54,7 @@ Progress: [███████░░░] 71% (Phase 3, Plan 1/3 summaries)
 | Phase 01 P02 | ~45min | 2 tasks | 4 files |
 | Phase 02 P01 | 4min | 3 tasks | 7 files |
 | Phase 02 P02 | 10min | 3 tasks | 11 files |
+| Phase 03 P01 | 8min | 2 tasks | 10 files |
 | Phase 03 P03 | 4min | 2 tasks | 5 files |
 
 ## Accumulated Context
@@ -78,6 +79,9 @@ Recent decisions affecting current work:
 - [Phase 02]: Claude Code CLI bumped to 2.1.62 in sandbox Dockerfile
 - [Phase 03]: Pure function parseSsOutput exported for testability instead of mocking execSync
 - [Phase 03]: PortsPanel self-gates via cloud check, RightPanel renders it unconditionally
+- [Phase 03]: pause() preferred over betaPause() with runtime fallback for E2B SDK compatibility
+- [Phase 03]: Heartbeat test uses extracted logic pattern (next/server cannot be mocked in Node ESM)
+- [Phase 03]: Rate limit cleanup interval uses unref() to prevent blocking process exit
 
 ### Pending Todos
 
@@ -91,6 +95,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T07:44:17.197Z
-Stopped at: Completed 03-03-PLAN.md
+Last session: 2026-03-13T07:48:00Z
+Stopped at: Completed 03-01-PLAN.md
 Resume file: None
