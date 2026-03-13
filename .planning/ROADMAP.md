@@ -59,10 +59,11 @@ Plans:
   1. 用户空闲超过设定时间后，沙箱自动暂停并保存完整文件系统和进程状态
   2. 用户恢复暂停的沙箱后，之前的对话历史、文件修改和配置全部保留
   3. CodePilot UI 中新增端口转发面板，展示沙箱内暴露的端口及可点击的预览链接
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 03-01: TBD
+- [ ] 03-01-PLAN.md — 沙箱生命周期管理（心跳/暂停/恢复 API + 限流 + 空闲警告 + 状态持久化）
+- [ ] 03-02-PLAN.md — 端口转发面板（端口扫描 API + PortsPanel 组件 + RightPanel 集成）
 
 ## Progress
 
@@ -73,4 +74,4 @@ Phases execute in numeric order: 1 -> 2 -> 3
 |-------|----------------|--------|-----------|
 | 1. E2B Sandbox Template | 0/2 | Planning complete | - |
 | 2. Portal Entry Site | 0/2 | Planning complete | - |
-| 3. Persistence & Hardening | 0/? | Not started | - |
+| 3. Persistence & Hardening | 0/2 | Planning complete | - |
