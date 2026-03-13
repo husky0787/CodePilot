@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { saveSandbox } from "@/lib/sandbox-storage";
+import { saveSandbox, loadSandbox } from "@/lib/sandbox-storage";
 
 type Step = "creating" | "starting" | "ready";
 
@@ -59,9 +59,10 @@ export function SandboxLauncher({
       }
 
       try {
-        const res = await fetch(
-          `/api/sandbox/status?id=${encodeURIComponent(sandboxId)}`
-        );
+        const saved = loadSandbox();
+        const params = new URLSearchParams({ id: sandboxId });
+        if (saved?.createdAt) params.set("createdAt", String(saved.createdAt));
+        const res = await fetch(`/api/sandbox/status?${params}`);
         const data = await res.json();
 
         if (cancelled) return;

@@ -36,9 +36,9 @@ export function SandboxRestore({ onCreateNew }: SandboxRestoreProps) {
       }
 
       try {
-        const res = await fetch(
-          `/api/sandbox/status?id=${encodeURIComponent(saved.sandboxId)}`
-        );
+        const params = new URLSearchParams({ id: saved.sandboxId });
+        if (saved.createdAt) params.set("createdAt", String(saved.createdAt));
+        const res = await fetch(`/api/sandbox/status?${params}`);
         const data = await res.json();
 
         if (cancelled) return;
