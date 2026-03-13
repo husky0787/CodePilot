@@ -34,8 +34,8 @@ RUN npm install || npm install
 # 复制项目源码
 COPY . .
 
-# 预装 Claude Code CLI（固定版本，更新时重建模板）
-RUN npm install -g @anthropic-ai/claude-code@1.0.17
+# 预装 Claude Code CLI（版本须与 claude-agent-sdk 兼容，见 node_modules/@anthropic-ai/claude-agent-sdk/package.json 的 claudeCodeVersion 字段）
+RUN npm install -g @anthropic-ai/claude-code@2.1.62
 
 # 运行时清除代理（E2B 沙箱可直连外网）
 ENV HTTP_PROXY="" HTTPS_PROXY="" http_proxy="" https_proxy="" no_proxy=""

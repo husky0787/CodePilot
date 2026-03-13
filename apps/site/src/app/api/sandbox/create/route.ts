@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { validateAnthropicKey } from "@/lib/validate-key";
 import { createSandbox } from "@/lib/e2b";
 
 /** Vercel Pro plan 函数超时 60 秒 */
@@ -11,31 +10,15 @@ export async function POST(req: NextRequest) {
   try {
     body = await req.json();
   } catch {
-    return NextResponse.json(
-      { error: "Invalid request body" },
-      { status: 400 }
-    );
+    body = {};
   }
 
-  const { apiKey } = body;
+  const apiKey =
+    typeof body.apiKey === "string" && body.apiKey.trim()
+      ? body.apiKey.trim()
+      : undefined;
 
-  if (!apiKey || typeof apiKey !== "string") {
-    return NextResponse.json(
-      { error: "API Key 是必填项" },
-      { status: 400 }
-    );
-  }
-
-  // 验证 Anthropic API Key
-  const validation = await validateAnthropicKey(apiKey);
-  if (!validation.valid) {
-    return NextResponse.json(
-      { error: validation.error },
-      { status: 401 }
-    );
-  }
-
-  // 创建 E2B 沙箱
+  // 创建 E2B 沙箱（apiKey 可选，用户可在沙箱内 Settings 配置 provider）
   try {
     const { sandboxId, url } = await createSandbox(apiKey);
     return NextResponse.json({ sandboxId, url });

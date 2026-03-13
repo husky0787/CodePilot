@@ -1,14 +1,31 @@
 /**
- * Anthropic API Key 验证
- * 使用 count_tokens 端点（免费、轻量）验证 Key 有效性
+ * Anthropic-compatible API Key 验证
+ * 使用 /v1/messages（max_tokens=1）验证 Key 有效性
+ * 兼容 Anthropic 原生 API 和第三方兼容端点（如智谱 GLM CN）
+ * 支持 ANTHROPIC_BASE_URL 自定义端点
+ * 支持 HTTPS_PROXY / HTTP_PROXY 代理
  */
+
+import { ProxyAgent, fetch as undiciFetch } from "undici";
+
+const proxyUrl =
+  process.env.HTTPS_PROXY ||
+  process.env.HTTP_PROXY ||
+  process.env.https_proxy ||
+  process.env.http_proxy;
+
+const dispatcher = proxyUrl ? new ProxyAgent(proxyUrl) : undefined;
+
+const baseUrl = (
+  process.env.ANTHROPIC_BASE_URL || "https://api.anthropic.com"
+).replace(/\/+$/, "");
 
 export async function validateAnthropicKey(
   apiKey: string
 ): Promise<{ valid: boolean; error?: string }> {
   try {
-    const res = await fetch(
-      "https://api.anthropic.com/v1/messages/count_tokens",
+    const res = await undiciFetch(
+      `${baseUrl}/v1/messages`,
       {
         method: "POST",
         headers: {
@@ -18,8 +35,10 @@ export async function validateAnthropicKey(
         },
         body: JSON.stringify({
           model: "claude-sonnet-4-20250514",
+          max_tokens: 1,
           messages: [{ role: "user", content: "hi" }],
         }),
+        dispatcher,
       }
     );
 

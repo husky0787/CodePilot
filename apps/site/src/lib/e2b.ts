@@ -9,13 +9,18 @@ import { Sandbox } from "e2b";
 export const TEMPLATE_ID = "9114lthidrvmoik0fcdw";
 
 /**
- * 创建 E2B 沙箱，注入用户的 Anthropic API Key
+ * 创建 E2B 沙箱，可选注入 API Key
+ * 用户也可在沙箱内 Settings 中配置 provider（如 GLM CN）
  */
 export async function createSandbox(
-  anthropicKey: string
+  anthropicKey?: string
 ): Promise<{ sandboxId: string; url: string }> {
+  const envs: Record<string, string> = {};
+  if (anthropicKey) {
+    envs.ANTHROPIC_API_KEY = anthropicKey;
+  }
   const sandbox = await Sandbox.create(TEMPLATE_ID, {
-    envs: { ANTHROPIC_API_KEY: anthropicKey },
+    envs,
     timeoutMs: 3_600_000,
   });
 
