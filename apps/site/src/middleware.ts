@@ -1,15 +1,16 @@
 import { createI18nMiddleware } from 'fumadocs-core/i18n/middleware';
 import type { NextRequest } from 'next/server';
+import type { NextFetchEvent } from 'next/server';
 import { i18n } from './lib/i18n';
 
 const i18nMiddleware = createI18nMiddleware(i18n);
 
-export default function middleware(request: NextRequest) {
+export default function middleware(request: NextRequest, event: NextFetchEvent) {
   // Root path serves the Cloud entry page — skip i18n redirect
   if (request.nextUrl.pathname === '/') {
     return;
   }
-  return i18nMiddleware(request);
+  return i18nMiddleware(request, event);
 }
 
 export const config = {

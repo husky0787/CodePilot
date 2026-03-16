@@ -1,18 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { checkSandbox, pauseSandbox } from "@/lib/e2b";
 import { Sandbox } from "e2b";
-
-/**
- * Detect whether a sandbox is paused by checking if it appears in the
- * E2B sandbox list despite being unreachable via connect.
- * Exported as a pure function for testability.
- */
-export function isPausedSandbox(
-  sandboxId: string,
-  listedIds: string[]
-): boolean {
-  return listedIds.includes(sandboxId);
-}
+import { isPausedSandbox } from "@/lib/sandbox-utils";
 
 /**
  * GET /api/sandbox/status?id=...&createdAt=...
@@ -64,7 +53,8 @@ export async function GET(req: NextRequest) {
 
   // Sandbox not alive -- check if it's paused (still listed on E2B)
   try {
-    const running = await Sandbox.list();
+    const paginator = Sandbox.list();
+    const running = await paginator.nextItems();
     const listedIds = running.map((s) => s.sandboxId);
     const paused = isPausedSandbox(sandboxId, listedIds);
 

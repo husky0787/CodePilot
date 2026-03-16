@@ -66,8 +66,10 @@ export async function pauseSandbox(sandboxId: string): Promise<boolean> {
     // 优先使用 pause()，回退到 betaPause()
     if (typeof sandbox.pause === "function") {
       await sandbox.pause();
-    } else if (typeof (sandbox as any).betaPause === "function") {
-      await (sandbox as any).betaPause();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } else if (typeof (sandbox as unknown as Record<string, any>).betaPause === "function") {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      await (sandbox as unknown as Record<string, any>).betaPause();
     } else {
       throw new Error("No pause method available on sandbox");
     }
