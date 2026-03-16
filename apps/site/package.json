@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev --port 3001",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3001",
+    "tunnel": "bash tunnel.sh",
     "lint": "eslint",
     "typecheck": "tsc -p tsconfig.check.json --noEmit"
   },
